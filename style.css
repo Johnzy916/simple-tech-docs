@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap');
+
+/* // base
+///////////////////// */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+}
+:root {
+  --very-light-gray: #EEEEEE;
+}
+
+/* // scrollbars
+///////////////////// */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: lightgray transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: lightgray;
+  border-radius: 2rem;
+}
+
+/* // navigation
+///////////////////// */
+
+#navbar {
+  border-right: 3px solid gray;
+  flex: 0 0 290px;
+  font-size: 1.7rem;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#navbar header {
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  border-top: 1px solid gray;
+  color: inherit;
+  display: inline-block;
+  padding: 1rem 2rem;
+  width: 100%;
+  transition: background-color 200ms;
+}
+
+.nav-link:hover {
+  background-color: var(--very-light-gray);
+}
+
+.nav-link:last-child {
+  border-bottom: 1px solid gray;
+}
+
+/* // sections
+///////////////////// */
+
+.main-section {
+  padding: 2rem;
+}
+
+.main-section header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+.main-section header span {
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.main-section header:hover span {
+  opacity: 1;
+}
+
+.main-section header svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: .5rem;
+  fill: gray;
+  transition: fill 200ms;
+}
+
+.main-section header svg:hover {
+  cursor: pointer;
+  fill: #333333;
+}
+
+/* // code
+///////////////////// */
+
+code {
+  display: block;
+  font-size: 1.5rem;
+  background: #eee;
+  border-radius: .5rem;
+  padding: 2rem 1rem;
+  white-space: pre;
+  margin: 3rem 0;
+}
+
+/* // lists
+///////////////////// */
+
+ul:not(ul ul){
+  margin: 3rem 0 3rem 5rem;
+}
+
+ul ul {
+  margin-left: 5rem;
+}
+
+li {
+  padding: .5rem 0;
+}
+
+/* // media queries
+///////////////////// */
+
+@media (max-width: 900px) {
+  body {
+    flex-flow: column nowrap;
+  }
+  #navbar {
+    border: none;
+  }
+  #navbar-links {
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    height: 250px;
+  }
+}
+@media (min-width: 900px) {
+  #navbar {
+    position: sticky;
+    top: 0;
+  }
+}
