@@ -1,3 +1,13 @@
+
+
+// add event listener to dark mode toggle
+const docRoot = document.querySelector('html');
+const darkCheckbox = document.querySelector('#checkbox-dark');
+
+darkCheckbox.addEventListener('change', ()=>{
+  docRoot.classList.toggle('dark-theme');
+})
+
 // add link icon to all headers
 const titleHeaders = document.querySelectorAll('#main-doc header');
 titleHeaders.forEach(header => {
@@ -16,5 +26,3 @@ titleHeaders.forEach(header => {
     })
     header.appendChild(spanElement);
 });
-
-console.log('window: ', window)
