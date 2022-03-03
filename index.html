@@ -59,9 +59,9 @@
       <header>Introduction</header>
       <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language.
         Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its
-        environment to provide programmatic control over them.
+        environment to provide programmatic control over them.</p>
 
-        JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language
+      <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language
         elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of
         purposes by supplementing it with additional objects; for example:</p>
 
@@ -90,22 +90,22 @@
       <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript
         language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most
         Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was
-        renamed from LiveScript to JavaScript.
+        renamed from LiveScript to JavaScript.</p>
 
-        In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system
-        based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a
+      <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime
+        system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a
         prototype-based object model instead of the more common class-based object model. The prototype-based model
         provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also
         supports functions without any special declarative requirements. Functions can be properties of objects,
-        executing as loosely typed methods.
+        executing as loosely typed methods.</p>
 
-        JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and
-        methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not
-        have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.</p>
+      <p>JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes,
+        and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do
+        not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.</p>
     </section>
     <section id="hello_world" class="main-section">
       <header>Hello world</header>
-      To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:
+      <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:
 
       <pre><code class="language-js">function greetMe(yourName) { 
     alert("Hello " + yourName); 
@@ -113,54 +113,54 @@
 greetMe("World");
 </code></pre>
 
-      Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!
-      </p>
+      Select the code in the pad and hit <kbd>Ctrl</kbd> + <kbd>R</kbd> to watch it unfold in your browser!</p>
     </section>
     <section id="variables" class="main-section">
       <header>Variables</header>
       <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers,
-        conform to certain rules.
+        conform to certain rules.</p>
 
-        A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can
-        also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z"
-        (uppercase) and the characters "a" through "z" (lowercase).
+      <p>A JavaScript identifier must start with a letter, underscore (<code>_</code>), or dollar sign (<code>$</code>);
+        subsequent characters can also be digits (<code>0</code>-<code>9</code>). Because JavaScript is case sensitive,
+        letters include the characters "<code>A</code>" through "<code>Z</code>" (uppercase) and the characters
+        "<code>a</code>" through "<code>z</code>" (lowercase).</p>
 
-        You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape
-        sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
+      <p>You can use ISO 8859-1 or Unicode letters such as <code>å</code> and <code>ü</code> in identifiers. You can
+        also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are
+        <code>Number_hits</code>, <code>temp99</code>, and <code>_name</code>.</p>
     </section>
     <section id="declaring_variables" class="main-section">
       <header>Declaring variables</header>
-      <p>You can declare a variable in three ways:
-        With the keyword var. For example,
+      <p>You can declare a variable in three ways:</p>
+      <p>With the keyword <code>var</code>. For example,
 
       <pre><code class="language-js">var x = 42</code></pre>
 
-      This syntax can be used to declare both local and global variables.
+      This syntax can be used to declare both local and global variables.</p>
 
-      By simply assigning it a value. For example,
+      <p>By simply assigning it a value. For example,
 
       <pre><code class="language-js">x = 42</code></pre>
 
-      This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this
-      variant.
+      This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.
+      </p>
 
-      With the keyword let. For example,
+      <p>With the keyword <code>let</code>. For example,
 
       <pre><code class="language-js">let y = 13</code></pre>
 
-      This syntax can be used to declare a block scope local variable. See Variable scope below.
-      </p>
+      This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
     </section>
     <section id="variable_scope" class="main-section">
       <header>Variable scope</header>
       <p>When you declare a variable outside of any function, it is called a global variable, because it is available to
         any other code in the current document. When you declare a variable within a function, it is called a local
-        variable, because it is available only within that function.
+        variable, because it is available only within that function.</p>
 
-        JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a
+      <p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a
         block is local to the function (or global scope) that the block resides within. For example the following code
-        will log 5, because the scope of x is the function (or global context) within which x is declared, not the
-        block, which in this case is an if statement.
+        will log <code>5</code>, because the scope of <code>x</code> is the function (or global context) within which
+        <code>x</code> is declared, not the block, which in this case is an <code>if</code> statement.
 
       <pre><code class="language-js">if (true) {
     var x = 5; 
@@ -168,41 +168,41 @@ greetMe("World");
 console.log(x); // 5
 </code></pre>
 
-      This behavior changes, when using the let declaration introduced in ECMAScript 2015.
+      This behavior changes, when using the <code>let</code> declaration introduced in ECMAScript 2015.
 
       <pre><code class="language-js">if (true) {
     let y = 5; 
   } 
 console.log(y); // ReferenceError: y is not defined
 </code></pre>
-
       </p>
     </section>
     <section id="global_variables" class="main-section">
       <header>Global variables</header>
-      <p>Global variables are in fact properties of the global object. In web pages the global object is window, so you
-        can set and access global variables using the window.variable syntax.
+      <p>Global variables are in fact properties of the global object. In web pages the global object is
+        <code>window</code>, so you can set and access global variables using the <code>window.variable</code> syntax.
+      </p>
 
-        Consequently, you can access global variables declared in one window or frame from another window or frame by
-        specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document,
-        you can refer to this variable from an iframe as parent.phoneNumber.</p>
+      <p>Consequently, you can access global variables declared in one window or frame from another window or frame by
+        specifying the window or frame name. For example, if a variable called <code>phoneNumber</code> is declared in a
+        document, you can refer to this variable from an iframe as <code>parent.phoneNumber</code>.</p>
     </section>
     <section id="constants" class="main-section">
       <header>Constants</header>
-      <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the
-        same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain
-        alphabetic, numeric, or underscore characters.
+      <p>You can create a read-only, named constant with the <code>const</code> keyword. The syntax of a constant
+        identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and
+        can contain alphabetic, numeric, or underscore characters.
 
       <pre><code class="language-js">const PI = 3.14;
 </code></pre>
 
       A constant cannot change value through assignment or be re-declared while the script is running. It has to be
-      initialized to a value.
+      initialized to a value.</p>
 
-      The scope rules for constants are the same as those for let block scope variables. If the const keyword is
-      omitted, the identifier is assumed to represent a variable.
+      <p>The scope rules for constants are the same as those for <code>let</code> block scope variables. If the
+        <code>const</code> keyword is omitted, the identifier is assumed to represent a variable.</p>
 
-      You cannot declare a constant with the same name as a function or variable in the same scope. For example:
+      <p>You cannot declare a constant with the same name as a function or variable in the same scope. For example:
 
       <pre><code class="language-js">// THIS WILL CAUSE AN ERROR
 function f() {};
@@ -228,11 +228,12 @@ MY_OBJECT.key = "otherValue";
       <ul>
         <li>Six data types that are primitives:</li>
         <ul>
-          <li>Boolean. true and false.</li>
-          <li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same
+          <li>Boolean. <code>true</code> and <code>false</code>.</li>
+          <li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive, <code>null</code> is
+            not the same
             as Null, NULL, or any other variant.</li>
           <li>undefined. A top-level property whose value is undefined.</li>
-          <li>Number. 42 or 3.14159.</li>
+          <li>Number. <code>42</code> or <code>3.14159</code>.</li>
           <li>String. "Howdy"</li>
           <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
         </ul>
@@ -241,12 +242,13 @@ MY_OBJECT.key = "otherValue";
       <p>Although these data types are a relatively small amount, they enable you to perform useful functions with your
         applications. Objects and functions are the other fundamental elements in the language. You can think of objects
         as named containers for values, and functions as procedures that your application can perform.
-      <p>
+      </p>
     </section>
     <section id="if...else_statements" class="main-section">
       <header>if...else statements</header>
-      <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to
-        execute a statement if the condition is false. An if statement looks as follows:
+      <p>Use the <code>if</code> statement to execute a statement if a logical condition is <code>true</code>. Use the
+        optional <code>else</code> clause to execute a statement if the condition is <code>false</code>. An
+        <code>if</code> statement looks as follows:
 
       <pre><code class="language-js">if (condition) { 
   statement_1; 
@@ -254,10 +256,16 @@ MY_OBJECT.key = "otherValue";
   statement_2; 
 }</code></pre>
 
-      condition can be any expression that evaluates to true or false. See Boolean for an explanation of what
-      evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is
-      executed. statement_1 and statement_2 can be any statement, including further nested if statements.
-      You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:
+      <code>condition</code> can be any expression that evaluates to <code>true</code> or <code>false</code>. See
+      Boolean for an explanation of what
+      evaluates to <code>true</code> and <code>false</code>.</p>
+
+      <p>If <code>condition</code> evaluates to <code>true</code>, <code>statement_1</code> is executed; otherwise,
+        <code>statement_2</code> is executed. <code>statement_1</code> and <code>statement_2</code> can be any
+        statement, including further nested <code>if</code> statements.</p>
+
+      <p>You may also compound the statements using <code>else if</code> to have multiple conditions tested in sequence,
+        as follows:
 
       <pre><code class="language-js">if (condition_1) {
   statement_1; 
@@ -270,9 +278,9 @@ MY_OBJECT.key = "otherValue";
 }
 </code></pre>
 
-      In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To
-      execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to
-      always use block statements, especially when nesting if statements:
+      In the case of multiple conditions only the first logical condition which evaluates to <code>true</code> will be
+      executed. To execute multiple statements, group them within a block statement (<code>{ ... }</code>). In general,
+      it's good practice to always use block statements, especially when nesting <code>if</code> statements:
 
       <pre><code class="language-js">if (condition) {
   statement_1_runs_if_condition_is_true;
@@ -283,8 +291,8 @@ MY_OBJECT.key = "otherValue";
 }
 </code></pre>
 
-      It is advisable to not use simple assignments in a conditional expression, because the assignment can be
-      confused with equality when glancing over the code. For example, do not use the following code:
+      It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused
+      with equality when glancing over the code. For example, do not use the following code:
 
       <pre><code class="language-js">if (x = y) {
   /* statements here */ 
@@ -296,24 +304,26 @@ MY_OBJECT.key = "otherValue";
       <pre><code class="language-js">if ((x = y)) {
   /* statements here */ 
 }</code></pre>
-
       </p>
     </section>
     <section id="while_statements" class="main-section">
       <header>while statements</header>
-      <p>A while statement executes its statements as long as a specified condition evaluates to true. A while
-      statement looks as follows:
-      while (condition) statement
-      If the condition becomes false, statement within the loop stops executing and control passes to the statement
-      following the loop.
-      The condition test occurs before statement in the loop is executed. If the condition returns true, statement is
-      executed and the condition is tested again. If the condition returns false, execution stops and control is
-      passed to the statement following while.
+      <p>A <code>while</code> statement executes its statements as long as a specified condition evaluates to
+        <code>true</code>. A <code>while</code> statement looks as follows:
 
-      To execute multiple statements, use a block statement ({ ... }) to group those statements.
+      <pre><code class="language-js">while (condition) statement</code></pre>
 
-      Example:
-      The following while loop iterates as long as n is less than three:
+      If the <code>condition</code> becomes <code>false</code>, <code>statement</code> within the loop stops executing
+      and control passes to the statement following the loop.</p>
+
+      <p>The condition test occurs before statement in the loop is executed. If the condition returns true, statement is
+        executed and the condition is tested again. If the condition returns false, execution stops and control is
+        passed to the statement following <code>while</code>.</p>
+
+      <p>To execute multiple statements, use a block statement (<code>{ ... }</code>) to group those statements.</p>
+
+      <p>Example:</p>
+      <p>The following <code>while</code> loop iterates as long as <code>n</code> is less than three:
 
       <pre><code class="language-js">var n = 0; 
 var x = 0; 
@@ -322,13 +332,13 @@ while (n < 3) {
   n++; x += n; 
 }</code></pre>
 
-      With each iteration, the loop increments <code>n</code> and adds that value to <code>x</code>. Therefore, <code>x</code> and <code>n</code> take on the following
-      values:
+      With each iteration, the loop increments <code>n</code> and adds that value to <code>x</code>. Therefore,
+      <code>x</code> and <code>n</code> take on the following values:
       </p>
       <ul>
-        <li>After the first pass: n = 1 and x = 1</li>
-        <li>After the second pass: n = 2 and x = 3</li>
-        <li>After the third pass: n = 3 and x = 6</li>
+        <li>After the first pass: <code>n = 1</code> and <code>x = 1</code></li>
+        <li>After the second pass: <code>n = 2</code> and <code>x = 3</code></li>
+        <li>After the third pass: <code>n = 3</code> and <code>x = 6</code></li>
       </ul>
     </section>
     <section id="function_declarations" class="main-section">
@@ -338,22 +348,24 @@ while (n < 3) {
       <ul>
         <li>The name of the function.</li>
         <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
-        <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+        <li>The JavaScript statements that define the function, enclosed in curly brackets, <code>{ }</code>.</li>
       </ul>
 
       <p>For example, the following code defines a simple function named square:
 
-        <pre><code class="language-js">function square(number) {
+      <pre><code class="language-js">function square(number) {
   return number * number; 
 }</code></pre>
-        The function <code>square</code> takes one argument, called <code>number</code>. The function consists of one statement that says to
-        return the argument of the function (that is, number) multiplied by itself. The <code>return</code> statement specifies the
-        value returned by the function.
 
-        <pre><code class="language-js">return number * number;</code></pre>
-        Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function,
-        but if the function changes the value of the parameter, this change is not reflected globally or in the calling
-        function.</p>
+      The function <code>square</code> takes one argument, called <code>number</code>. The function consists of one
+      statement that says to return the argument of the function (that is, number) multiplied by itself. The
+      <code>return</code> statement specifies the value returned by the function.
+
+      <pre><code class="language-js">return number * number;</code></pre>
+
+      Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but
+      if the function changes the value of the parameter, this change is not reflected globally or in the calling
+      function.</p>
     </section>
     <section id="reference" class="main-section">
       <header>Reference</header>
